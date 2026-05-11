@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gene's Family Hair Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f7f7f7;
+      color:#111;
+      line-height:1.6;
+    }
+
+    header{
+      background:#111;
+      color:white;
+      padding:20px 8%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:1.4rem;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#c7c7c7;
+    }
+
+    .hero{
+      height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h2{
+      font-size:4rem;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      color:#e3e3e3;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:white;
+      color:#111;
+      padding:14px 32px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#d8d8d8;
+      transform:translateY(-2px);
+    }
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h3{
+      font-size:2.4rem;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:white;
+      padding:35px;
+      border-radius:16px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .service-card h4{
+      margin-bottom:10px;
+      font-size:1.3rem;
+    }
+
+    .price{
+      color:#777;
+      margin-bottom:15px;
+      font-weight:600;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:18px;
+      object-fit:cover;
+      height:500px;
+    }
+
+    .about-text h3{
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .review{
+      background:white;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .stars{
+      color:gold;
+      margin-bottom:15px;
+      font-size:1.1rem;
+    }
+
+    .review h5{
+      margin-top:18px;
+      font-size:1rem;
+    }
+
+    .contact{
+      background:#111;
+      color:white;
+      border-radius:20px;
+      padding:60px;
+      text-align:center;
+    }
+
+    .contact h3{
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      margin-bottom:12px;
+      color:#d2d2d2;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#777;
+      font-size:0.95rem;
+    }
+
+    @media(max-width:900px){
+
+      .hero h2{
+        font-size:2.8rem;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      nav ul{
+        display:none;
+      }
+
+      .contact{
+        padding:40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>Gene's Family Hair Care</h1>
+
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Classic Cuts. Professional Service.</h2>
+
+    <p>
+      A trusted hometown barber shop delivering clean haircuts,
+      friendly service, and timeless style for generations.
+    </p>
+
+    <a href="#contact" class="btn">Visit The Shop</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h3>Services</h3>
+    <p>Professional barber services with small-town hospitality.</p>
+  </div>
+
+  <div class="services">
+
+    <div class="service-card">
+      <h4>Classic Haircut</h4>
+      <div class="price">$20+</div>
+      <p>Clean traditional haircut tailored to your preferred style.</p>
+    </div>
+
+    <div class="service-card">
+      <h4>Beard Trim</h4>
+      <div class="price">$10+</div>
+      <p>Sharp beard shaping and trimming for a polished look.</p>
+    </div>
+
+    <div class="service-card">
+      <h4>Kids Haircuts</h4>
+      <div class="price">$15+</div>
+      <p>Friendly and comfortable haircuts for children of all ages.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+
+    <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1200&auto=format&fit=crop" alt="Barber Shop">
+
+    <div class="about-text">
+      <h3>About The Shop</h3>
+
+      <p>
+        Gene's Family Hair Care is a local barber shop known for quality
+        haircuts, honest prices, and a welcoming atmosphere.
+      </p>
+
+      <br>
+
+      <p>
+        Customers appreciate the friendly conversations, professional
+        service, and classic barber shop experience that keeps the
+        community coming back year after year.
+      </p>
+
+      <br>
+
+      <p>
+        Whether you're stopping in for a quick trim or a fresh new style,
+        you'll always leave looking your best.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-title">
+    <h3>Customer Reviews</h3>
+    <p>Trusted by the local community.</p>
+  </div>
+
+  <div class="reviews">
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        “Great haircuts and friendly people.
+        Always a great experience every visit.”
+      </p>
+
+      <h5>— Local Customer</h5>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        “Excellent barber shop with very reasonable prices
+        and professional service.”
+      </p>
+
+      <h5>— Reese Resident</h5>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        “Classic old-school barber shop atmosphere.
+        Hard to find places like this anymore.”
+      </p>
+
+      <h5>— Returning Client</h5>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+
+    <h3>Visit Gene's Family Hair Care</h3>
+
+    <p>9740 Saginaw St, Reese, MI 48757</p>
+
+    <p>(989) 868-4483</p>
+
+    <p>Open Tuesday – Saturday</p>
+
+    <br>
+
+    <a 
+  href="https://www.google.com/maps/place/Gene's+Family+Hair+Care/@43.451973,-83.697064,17z" 
+  target="_blank" 
+  class="btn"
+>
+  Get Directions
+</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Gene's Family Hair Care • Professional Barber Shop Website
+</footer>
+
+</body>
+</html>
